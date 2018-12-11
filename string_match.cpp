@@ -252,7 +252,7 @@ void test(char *funname, int (*fun)(char*,char*), char *ts, char *ps)
     start = clock();
     int i = fun(ts, ps);
     end = clock();
-    printf("function %s find index=%d\t%d millisecond\n",funname,i,(end-start)/CLOCKS_PER_SEC);
+    printf("function %s index=%d\t%f 秒\n",funname,i,(double)(end-start)/CLOCKS_PER_SEC);
 }
 
 
@@ -286,7 +286,7 @@ char* getRandString(int *len, int isRandLen)
 
 int main(){
     int tl = 0;
-    int pl = 34233232;
+    int pl = 100000;
     char *ts = getRandString(&tl, 1);
     char *ps = getRandString(&pl, 0);
 
