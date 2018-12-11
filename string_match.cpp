@@ -294,7 +294,7 @@ int main(){
     printf("模式串长度: %d\n", pl);
     printf("开始测试查找\n");
 
-    test("bm_a", bm_a, ts, ps);
+    test("bm_a", bm, ts, ps);
     test("bf", bf, ts, ps);
     test("kmp", KMP, ts, ps);
     free(ts);
