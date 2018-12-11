@@ -286,7 +286,7 @@ char* getRandString(int *len, int isRandLen)
 
 int main(){
     int tl = 0;
-    int pl = 100000;
+    int pl = 10000000;
     char *ts = getRandString(&tl, 1);
     char *ps = getRandString(&pl, 0);
 
@@ -294,7 +294,7 @@ int main(){
     printf("模式串长度: %d\n", pl);
     printf("开始测试查找\n");
 
-    test("bm_a", bm, ts, ps);
+    test("bm", bm, ts, ps);
     test("bf", bf, ts, ps);
     test("kmp", KMP, ts, ps);
     free(ts);
